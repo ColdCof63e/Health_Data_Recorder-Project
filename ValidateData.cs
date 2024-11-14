@@ -66,5 +66,17 @@ namespace Project
         {
             return string.IsNullOrEmpty(textBox.Text);
         }
+
+        public static bool UserRole(TextBox textBox)
+        {
+            foreach (var credential in credentials)
+            {
+                if (credential.EmailID.Equals(textBox.Text, StringComparison.OrdinalIgnoreCase))
+                {
+                    return Boolean.Parse(credential.IsTech);
+                }
+            }
+            return false;
+        }
     }
 }

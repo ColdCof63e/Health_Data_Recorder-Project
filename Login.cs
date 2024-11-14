@@ -39,7 +39,7 @@ namespace Project
                 if(ValidateData.IsValidCredentials(emailBox.Text, passwordBox.Text))
                 {
                     this.Hide();
-                    UserHome usrHome = new UserHome();
+                    UserHome usrHome = new UserHome(emailBox);
                     usrHome.StartPosition = FormStartPosition.CenterScreen;
                     usrHome.WindowState = FormWindowState.Maximized;
                     usrHome.Show();

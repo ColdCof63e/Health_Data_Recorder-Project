@@ -86,5 +86,18 @@ namespace Project
             sw.Close();
             fs.Close();
         }
+
+        public static string GetUserName(TextBox email)
+        {
+            List<Credentials> credentials = ReadFromAFile();
+            foreach (Credentials cred in credentials)
+            {
+                if(cred.EmailID.Equals(email.Text, StringComparison.OrdinalIgnoreCase))
+                {
+                    return cred.Name;
+                }
+            }
+            return "";
+        }
     }
 }

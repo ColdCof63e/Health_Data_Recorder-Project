@@ -12,11 +12,13 @@ namespace Project
 {
     public partial class MyAccount : Form
     {
-        public MyAccount()
+        public MyAccount(TextBox email)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
+
+            this.nameBox.Text = FileOperations.GetUserName(email);
         }
 
         private void MyAccount_Load(object sender, EventArgs e)
