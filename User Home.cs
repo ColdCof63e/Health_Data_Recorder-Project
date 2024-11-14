@@ -12,22 +12,24 @@ namespace Project
 {
     public partial class UserHome : Form
     {
+        public string Email;
         public UserHome(TextBox email)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.WindowState = FormWindowState.Maximized;
+            Email = email.Text;
         }
 
-        private void MyAccountBtn_Click(object sender, EventArgs e, TextBox email)
+        private void MyAccountBtn_Click(object sender, EventArgs e)
         {
             FileOperations.FileLogs(MyAccountBtn.Text);
             this.Hide();
-            MyAccount myAccount = new MyAccount(email);
+            MyAccount myAccount = new MyAccount(Email);
             myAccount.Show();
         }
 
-        private void CreateNewEntryBtn_Click(object sender, EventArgs e, string email)
+        private void CreateNewEntryBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             //Project.HealthDataLogger_CSharp.healthDataRecordForm hdr = new healthDataRecordForm();

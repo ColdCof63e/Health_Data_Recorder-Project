@@ -12,7 +12,7 @@ namespace Project
 {
     public partial class MyAccount : Form
     {
-        public MyAccount(TextBox email)
+        public MyAccount(string email)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;

@@ -87,12 +87,12 @@ namespace Project
             fs.Close();
         }
 
-        public static string GetUserName(TextBox email)
+        public static string GetUserName(string email)
         {
             List<Credentials> credentials = ReadFromAFile();
             foreach (Credentials cred in credentials)
             {
-                if(cred.EmailID.Equals(email.Text, StringComparison.OrdinalIgnoreCase))
+                if(cred.EmailID.Equals(email, StringComparison.OrdinalIgnoreCase))
                 {
                     return cred.Name;
                 }
