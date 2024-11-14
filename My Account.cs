@@ -19,6 +19,7 @@ namespace Project
             this.MaximizeBox = false;
 
             this.nameBox.Text = FileOperations.GetUserName(email);
+            this.nameBox.Enabled = false;
         }
 
         private void MyAccount_Load(object sender, EventArgs e)

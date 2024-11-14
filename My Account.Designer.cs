@@ -45,13 +45,15 @@
             this.female = new System.Windows.Forms.RadioButton();
             this.male = new System.Windows.Forms.RadioButton();
             this.bloodTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.genderGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 39);
+            this.label1.Location = new System.Drawing.Point(55, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
@@ -59,7 +61,7 @@
             // 
             // weightBox
             // 
-            this.weightBox.Location = new System.Drawing.Point(99, 240);
+            this.weightBox.Location = new System.Drawing.Point(446, 358);
             this.weightBox.Name = "weightBox";
             this.weightBox.Size = new System.Drawing.Size(100, 20);
             this.weightBox.TabIndex = 1;
@@ -74,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 107);
+            this.label2.Location = new System.Drawing.Point(411, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 2;
@@ -83,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 175);
+            this.label3.Location = new System.Drawing.Point(399, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 4;
@@ -92,14 +94,15 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(99, 376);
+            this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(100, 53);
             this.textBox4.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 243);
+            this.label4.Location = new System.Drawing.Point(396, 361);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 6;
@@ -107,7 +110,7 @@
             // 
             // heightBox
             // 
-            this.heightBox.Location = new System.Drawing.Point(99, 172);
+            this.heightBox.Location = new System.Drawing.Point(446, 290);
             this.heightBox.Name = "heightBox";
             this.heightBox.Size = new System.Drawing.Size(100, 20);
             this.heightBox.TabIndex = 9;
@@ -123,7 +126,7 @@
             // 
             // nameBox
             // 
-            this.nameBox.Location = new System.Drawing.Point(99, 36);
+            this.nameBox.Location = new System.Drawing.Point(99, 105);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(100, 20);
             this.nameBox.TabIndex = 11;
@@ -139,7 +142,7 @@
             // 
             // ageBox
             // 
-            this.ageBox.Location = new System.Drawing.Point(99, 104);
+            this.ageBox.Location = new System.Drawing.Point(446, 222);
             this.ageBox.Name = "ageBox";
             this.ageBox.Size = new System.Drawing.Size(100, 20);
             this.ageBox.TabIndex = 13;
@@ -207,11 +210,29 @@
             this.bloodTypeComboBox.TabIndex = 15;
             this.bloodTypeComboBox.Text = "Boold Type";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(44, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Email-ID:";
+            // 
             // MyAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.bloodTypeComboBox);
             this.Controls.Add(this.genderGroup);
             this.Controls.Add(this.ageBox);
@@ -255,5 +276,7 @@
         private System.Windows.Forms.RadioButton male;
         private System.Windows.Forms.RadioButton others;
         private System.Windows.Forms.ComboBox bloodTypeComboBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
     }
 }
