@@ -157,6 +157,7 @@
             this.Controls.Add(this.requestEmail);
             this.Name = "Forgot_Password";
             this.Text = "Forgot Password";
+            this.Load += new System.EventHandler(this.Forgot_Password_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

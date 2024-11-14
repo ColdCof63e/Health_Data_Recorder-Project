@@ -34,6 +34,9 @@ namespace Project
             confirmPasswordBox.Visible = false;
             
             promptLabel.Visible = false;
+
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
         }
 
         private void uniButton_Click(object sender, EventArgs e)
@@ -140,6 +143,22 @@ namespace Project
         public int GenerateVerificationCode()
         {
             return 100000 + random.Next(900000);
+        }
+
+        private void Forgot_Password_Load(object sender, EventArgs e)
+        {
+            this.FormClosing += Forgot_Password_FormClosing;
+        }
+
+        private void Forgot_Password_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you Sure\nYou want Exit!",
+                "Discard Reset Password Changes?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
