@@ -40,6 +40,7 @@
             // 
             // emailBox
             // 
+            this.emailBox.AcceptsTab = true;
             this.emailBox.Location = new System.Drawing.Point(224, 44);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(100, 20);
@@ -65,6 +66,7 @@
             // 
             // passwordBox
             // 
+            this.passwordBox.AcceptsTab = true;
             this.passwordBox.Location = new System.Drawing.Point(224, 89);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
@@ -74,6 +76,7 @@
             // forgotPassword
             // 
             this.forgotPassword.AutoSize = true;
+            this.forgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forgotPassword.Location = new System.Drawing.Point(202, 137);
             this.forgotPassword.Name = "forgotPassword";
             this.forgotPassword.Size = new System.Drawing.Size(92, 13);
@@ -104,6 +107,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkLabel1.Location = new System.Drawing.Point(203, 261);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(81, 13);
@@ -126,7 +130,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.emailBox);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

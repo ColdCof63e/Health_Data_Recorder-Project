@@ -32,5 +32,23 @@ namespace Project
             this.Hide();
             //Project.HealthDataLogger_CSharp.healthDataRecordForm hdr = new healthDataRecordForm();
         }
+
+        private void UserHome_Load(object sender, EventArgs e)
+        {
+            this.FormClosing += UserHome_FormClosing;
+        }
+
+        private void UserHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Do you want to Exit Application!",
+                "Exit Application?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // This condition is to prevent closing form if user selects 'No'
+            if (res == DialogResult.No) 
+            {
+                // This statement is responsible for terminating the window
+                e.Cancel = true;
+            }
+        }
     }
 }

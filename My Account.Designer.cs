@@ -228,6 +228,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MyAccount";
             this.Text = "My Account";
+            this.Load += new System.EventHandler(this.MyAccount_Load);
             this.genderGroup.ResumeLayout(false);
             this.genderGroup.PerformLayout();
             this.ResumeLayout(false);

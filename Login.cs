@@ -66,5 +66,22 @@ namespace Project
             accCreate.MaximizeBox = false;
             accCreate.Show();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.FormClosing += Login_FormClosing;
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //throw new NotImplementedException();
+            DialogResult result = MessageBox.Show("Do you want to Cancel Login?",
+                "Confirm Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

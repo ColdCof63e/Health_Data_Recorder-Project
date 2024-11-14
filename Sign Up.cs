@@ -59,5 +59,21 @@ namespace Project
             login.MaximizeBox = false;
             login.Show();
         }
+
+        private void signUp_Load(object sender, EventArgs e)
+        {
+            this.FormClosing += signUp_FormClosing;
+        }
+
+        private void signUp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to Cancel Account Creation?",
+                            "Discard Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
