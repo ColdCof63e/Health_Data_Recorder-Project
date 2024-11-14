@@ -16,6 +16,7 @@ namespace Project
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
         }
 
         private void MyAccount_Load(object sender, EventArgs e)
